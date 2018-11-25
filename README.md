@@ -95,3 +95,17 @@ to setup the google-services.json correctly in your app
 deployment or it will not correctly show the screen, dropping
 out basically immediately.  You should get an error back from the
 api call to the client saying it dropped.
+
+### Failed to capture snapshot of input files for task ':flutter_places_dialog:compileDebugAidl' property 'importDirs' during up-to-date check.
+> The library com.google.android.gms:play-services-base is being requested by various other libraries at [[15.0.0,15.0.0]], but resolves to 16.0.1. Disable the plugin and check your dependencies tree using ./gradlew :app:dependencies.
+
+Within your app-level `build.gradle`
+
+```
+dependencies {
+   // ...
+   project.ext {
+      googlePlayServicesVersion = "16.0.1"
+   }
+}
+```
