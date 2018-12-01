@@ -2,14 +2,14 @@ group 'com.example.flutterplacesdialog'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -40,11 +40,10 @@ android {
 }
 
 dependencies {
-    def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '15.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:27.1.0'
-    implementation "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
-    implementation "com.google.android.gms:play-services-base:$googlePlayServicesVersion"
-    implementation "com.google.android.gms:play-services-places:$googlePlayServicesVersion"
-    implementation "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
+    implementation "com.google.android.gms:play-services-maps:16.0.1"
+    implementation "com.google.android.gms:play-services-base:16.0.1"
+    implementation "com.google.android.gms:play-services-places:16.0.1"
+    implementation "com.google.android.gms:play-services-location:16.0.1"
 }
